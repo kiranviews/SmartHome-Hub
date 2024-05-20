@@ -1,0 +1,92 @@
+<!doctype html>
+
+    <html>
+
+        <head>
+            <title>Add Device</title>
+            <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+        </head>
+        
+        <body class="grid-container-adddevice">
+            <header id="header">
+                <div class="Logo">
+                    <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+                </div>
+        
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/list">View Devices</a></li>
+                    <li><a href="/adddevice">Add Devices</a></li>
+                    <li><a href="/devicesearch">Search Devices</a></li>
+                    <li><a href="/deletedevice">Delete Devices</a></li>
+                </ul>
+            </header>
+
+        <body>
+
+    <class id="aboutadddevice">
+        <h1> This is add device page </h1>
+    </class>
+    
+    <class id="addform">
+            <form method="POST" action="/added">
+            <!-- name -->
+            <label for="name">Name of Device:</label><br>
+            <input name="name" id="name" type="text" value="" required>
+            <br><br>
+            
+            <!-- Type of Device  -->
+            <!-- aircon, curtains, lights, tv, oven -->
+                <label for="type">Type of Device:</label><br>
+                <select name="type" id="type" required>
+                    <option value="aircon">aircon</option>
+                    <option value="curtains">curtains</option>
+                    <option value="lights">lights</option>
+                    <option value="tv">TV</option>
+                    <option value="oven">oven</option>
+                </select>
+        <br><br>
+            <!-- Power  -->
+            <label for="power">Power:</label><br>
+            <select name="power" type="text" id="power" required>
+                <option value="ON">ON</option>
+                <option value="OFF">OFF</option>
+                <option value="NA">NA</option>
+            </select>
+        <br><br>
+        <!-- State -->
+            <label for="state">State:</label><br>
+            <select name="state" type="text" id="state">
+                <option value="OPEN">OPEN</option>
+                <option value="CLOSE">CLOSE</option>
+                <option value="NA">NA</option>
+            </select>
+        <br><br>
+        <!-- Temperature -->
+            <label for="temp">Temperature:</label><br>
+            <input name="temp" id="temp" type="number" min= "15" max= "300" step="0.1" value=""><br>
+
+            <label for="volume">Volume:</label><br>
+            <input id="volume" type="number" name="volume" min= "0" max= "100" step="1"value=""><br>
+        <br>
+            <button input type="submit" value="Submit">SUBMIT</button>
+            </form>
+        <br>
+    </class>
+
+<footer id="Footer">
+    <div class="footer-info">
+       <p>Designed by <span>Logesh Kiran</span></p>
+    </div>
+
+</footer>
+
+
+
+
+
+
+</body>
+
+</html>

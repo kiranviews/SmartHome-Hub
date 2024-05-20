@@ -1,0 +1,542 @@
+/*global CSS------------------------------------*/
+
+body {
+  background: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  /*max-width limits the entire page to a certain width*/
+  max-width: 2000px;
+  /*padding to separate the words from each other and the max-width*/
+  padding: 3em 3em 3em;
+  text-align: center;
+}
+
+/* CSS FOR HEADER SECTION, COMMON FOR ALL PAGES */
+#header {
+  grid-area: header;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Logo CSS */
+.Logo img {
+  border-radius: 35px;
+  float: left;
+}
+
+/* NAVIGATION BAR CSS */
+.nav {
+  float: right;
+  list-style: none;
+  margin-top: 45px;
+  padding: 10px;
+}
+
+.nav li {
+  display: inline-block;
+}
+.nav li a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.nav li a:hover {
+  background: #FFD7BA;
+  border-radius: 25px;
+  color: #333;
+}
+
+/* FOOTER CSS */
+footer{
+  grid-area: footer;
+}
+
+footer {
+  background: black;
+  border-radius: 5px;
+}
+
+footer {
+  background: #e8e8e4;
+  border-radius: 5px;
+}
+
+.footer-content {
+  color: black;
+}
+
+
+
+/*index.html CSS------------------------------------*/
+
+#indexinfo{
+  grid-area: indexinfo;
+}
+
+#abouttab{
+  grid-area: abouttab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#abouttab button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+#listtab{
+  grid-area: listtab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#listtab button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+
+#adddevicetab{
+  grid-area: adddevicetab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#adddevicetab button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+
+#searchtab{
+  grid-area: searchtab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#searchtab button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+
+#deletetab{
+  grid-area: deletetab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#deletetab button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+
+#updatetab{
+  grid-area: updatetab;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+
+
+
+/* CSS for Grid Container */
+.grid-container-index {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "indexinfo indexinfo indexinfo indexinfo"
+    "abouttab abouttab listtab listtab"
+    "adddevicetab adddevicetab searchtab searchtab"
+    "deletetab deletetab updatetab updatetab"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}
+
+
+
+/*about.html CSS------------------------------------*/
+
+#aboutinfo{
+  grid-area: aboutinfo;
+}
+
+#aboutSmart{
+  grid-area: aboutSmart;
+  text-align: left;
+  text-align: justify;
+  padding: 30px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#ourfeatures{
+  grid-area: features;
+  text-align: left;
+  text-align: justify;
+  padding: 30px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+
+/* CSS for Grid Container */
+.grid-container-about {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "aboutinfo aboutinfo aboutinfo aboutinfo"
+    "aboutSmart aboutSmart aboutSmart aboutSmart"
+    "features features features features"
+    "footer footer footer footer ";
+  grid-gap: 10px;
+}
+
+
+
+/*list.html CSS------------------------------------*/
+
+/* NAVIGATION BAR CSS */
+
+.aboutList{
+  grid-area: about;
+}
+
+
+.Aircons {
+  grid-area: Aircons;
+  text-align: justify;
+  padding: 10px;
+  background: #f8edeb;
+
+  color: black;
+
+  border-radius: 15px;
+
+}
+
+.Curtains{
+  grid-area: Curtains;
+    text-align: justify;
+  padding: 10px;
+  background: #f8edeb;
+
+  color: black;
+
+  border-radius: 15px;
+}
+
+.Lights{
+  grid-area: Lights;
+    text-align: justify;
+  padding: 10px;
+  background: #f8edeb;
+
+  color: black;
+
+  border-radius: 15px;
+}
+
+.TV{
+  grid-area: TV;
+    text-align: justify;
+  padding: 10px;
+  background: #f8edeb;
+
+  color: black;
+
+  border-radius: 15px;
+}
+
+.Oven{
+  grid-area: Oven;
+    text-align: justify;
+  padding: 10px;
+  background: #f8edeb;
+
+  color: black;
+
+  border-radius: 15px;
+}
+
+/* CSS for Grid Container */
+.grid-container-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "about about about about"
+    "Aircons Aircons Aircons Aircons"
+    "Curtains Curtains Curtains Curtains"
+    "Lights Lights Lights Lights"
+    "TV TV TV TV"
+    "Oven Oven Oven Oven";
+  grid-gap: 10px;
+}
+
+
+/*adddevice.html CSS------------------------------------*/
+
+#aboutadddevice{
+  grid-area: about;
+}
+
+#addform{
+  grid-area: form;
+}
+
+#addform input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+
+#addform input[type=number] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+#addform select {
+  width: 50%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+#addform button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+
+
+}
+
+
+.grid-container-adddevice {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "about about about about"
+    "form form form form"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}
+
+
+/*showstatus.html CSS------------------------------------*/
+#header{
+  grid-area: header;
+}
+
+#aboutstatus{
+  grid-area: aboutstatus;
+}
+
+#result{
+  grid-area: result;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+
+}
+
+
+.grid-container-showstatus{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "aboutstatus aboutstatus aboutstatus aboutstatus"
+    "result result result result"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}
+
+/*devicesearch.html CSS------------------------------------*/
+
+#header{
+  grid-area: header;
+}
+
+#aboutsearch{
+  grid-area: aboutsearch;
+}
+
+#search{
+  grid-area: search;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+}
+
+#search select[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 16px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+#search button{
+  background-color: #E8E8E4;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 14px 30px;
+  border: none;
+
+
+}
+
+
+
+.grid-container-search{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "aboutsearch aboutsearch aboutsearch aboutsearch"
+    "search search search search"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}
+
+
+
+
+
+
+
+/*deletedevice.html CSS------------------------------------*/
+#header{
+  grid-area: header;
+}
+
+#aboutdelete{
+  grid-area: aboutdelete;
+
+
+}
+
+#deletedevice{
+  grid-area: deletedevice;
+  padding: 10px;
+  background: #D8E2DC;
+  border-radius: 15px;
+  color: black;
+
+}
+
+#deletedevice select[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+#deletedevice button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+
+
+
+}
+
+.grid-container-deletedevice{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "aboutdelete aboutdelete aboutdelete aboutdelete"
+    "deletedevice deletedevice deletedevice deletedevice"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}
+
+/*deletestatus.html CSS------------------------------------*/
+#header{
+  grid-area: header;
+}
+
+#deleteinfo{
+  grid-area: deleteinfo;
+  background-color: #E8E8E4;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+
+
+}
+
+#deleteinfo button{
+  background-color: #FAE1DD;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+}
+
+.grid-container-deleted{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "deleteinfo deleteinfo deleteinfo deleteinfo"
+    "footer footer footer footer";
+  grid-gap: 10px;
+}

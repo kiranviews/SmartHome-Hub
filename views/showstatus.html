@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>This is the about page of the webpage!</title>
+        <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+    </head>
+    
+    <body class="grid-container-showstatus">
+        <header id="header">
+            <div class="Logo">
+                <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+            </div>
+    
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/list">View Devices</a></li>
+                <li><a href="/adddevice">Add Devices</a></li>
+                <li><a href="/devicesearch">Search Devices</a></li>
+                <li><a href="/deletedevice">Delete Devices</a></li>
+            </ul>
+            
+        </header>
+    
+
+<body>
+ <class id="aboutstatus">
+    <h1> View Status </h1>
+</class>
+
+<class id="result">
+    <ul>
+    
+    <!-- this if loop allows site to dsiplay the relevant fields for the relevant devices -->
+        <% availabledevices.forEach(function(device){ %>
+
+            <% if(device.type == "aircon"){ %>
+                <h3>Name of Device: </h3><%= device.name %> 
+                <h4>Power: </h4><%= device.power %>
+                <h4>Temperature: </h4><%= device.temp %> <text>Degree Celcius</text>
+                
+            <% } %>  
+
+            <% if(device.type == "curtains"){ %>
+                <h3>Name of Device: </h3><%= device.name %>
+                <h4>State of Device: </h4><%= device.state %>
+            <% } %>
+
+            <% if(device.type == "lights"){ %>
+                <h3>Name of Device: </h3><%= device.name %>
+                <h4>Power: </h4><%= device.power %> 
+            <% } %>
+
+            <% if(device.type == "tv"){ %>
+                <h3>Name of Device: </h3><%= device.name %>
+                <h4>Power: </h4><%= device.power %>
+                <h4>Volume (if applicable): </h4><%= device.volume %>
+            <% } %>
+
+            <% if(device.type == "oven"){ %>
+                <h3>Name of Device: </h3><%= device.name %>
+                <h4>Power: </h4><%= device.power %>
+                <h4>Temperature (if applicable): </h4><%= device.temp %> <text>Degree Celcius</text>
+            
+
+            <% } %>
+        <% }) %>
+    </ul>
+</class>
+</body>
+
+<footer>
+    <p>Designed by <span>Logesh Kiran</span></p>
+</footer>
+</html>

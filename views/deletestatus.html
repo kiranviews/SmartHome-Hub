@@ -1,0 +1,40 @@
+<!-- This is the delete status page -->
+
+<!doctype html>
+    <html>
+
+        <head>
+            <title>Delete Status</title>
+            <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+        </head>
+
+        <body class="grid-container-deleted">
+            <header id="header">
+                <div class="Logo">
+                    <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+                </div>
+
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/list">View Devices</a></li>
+                    <li><a href="/adddevice">Add Devices</a></li>
+                    <li><a href="/devicesearch">Search Devices</a></li>
+                    <li><a href="/deletedevice">Delete Devices</a></li>
+                </ul>
+            </header>
+
+            <div id="deleteinfo">
+                <h1><%= availabledevices.split(",").join(" ") %> has been deleted</h1>
+                <button><a href="/", style="text-decoration: none;">Retun to Home Page</a></button>
+
+            </div>
+            
+
+        </body>
+
+        <footer>
+            <p>Designed by <span>Logesh Kiran</span></p>
+        </footer>
+
+    </html>

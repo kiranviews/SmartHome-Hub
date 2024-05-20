@@ -1,0 +1,54 @@
+<!-- This is the delete device page -->
+<!doctype html>
+    <html>
+
+    <head>
+        <title>Delete Device</title>
+        <!-- Link to the CSS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+    </head>
+
+    <body class="grid-container-deletedevice">
+        <header id="header">
+            <div class="Logo">
+            <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+            </div>
+
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/list">View Devices</a></li>
+                <li><a href="/adddevice">Add Devices</a></li>
+                <li><a href="/devicesearch">Search Devices</a></li>
+                <li><a href="/deletedevice">Delete Devices</a></li>
+            </ul>
+        </header>
+
+
+    <div id="aboutdelete">
+        <h1> Delete Device </h1>
+        <p>Choose a Device to Delete</p>
+    </div>  
+
+    <div id="deletedevice">
+        <form action="/deletedevice-result-db" method="GET">
+
+            <select id="name" type="text" name="name">
+                <% availabledevices.forEach(function(device){ %>
+                <option value = <%= device.name.split(' ') %>><%= device.name %> </option>
+                <% }) %>
+            </select>
+        <br><br>
+            <button input type="submit" value="Submit">SUBMIT</button>
+        </form>
+
+    </div>
+    
+        
+    </body>
+
+    <footer>
+        <p>Designed by <span>Logesh Kiran</span></p>
+    </footer>
+
+    </html>

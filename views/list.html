@@ -1,0 +1,130 @@
+<!-- This is where users sees all the devices with all its staus under one page -->
+
+<!doctype html>
+<html>
+
+<head>
+    <title>View device status</title>
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+</head>
+
+<body class="grid-container-list">
+    <header id="header">
+        <div class="Logo">
+            <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/list">View Devices</a></li>
+            <li><a href="/adddevice">Add Devices</a></li>
+            <li><a href="/devicesearch">Search Devices</a></li>
+            <li><a href="/deletedevice">Delete Devices</a></li>
+        </ul>
+    </header>
+<div class="aboutList">
+    <h1>This is where you check the device status</h1>
+</div>
+
+
+<div class="Aircons">
+    <h3>Your Aircons: </h3>
+
+    <ul>
+        <% availabledevices.forEach(function(device){ %>
+
+            <% if(device.type === "aircon"){ %>    
+            
+            <h3>Name of Device: </h3><%= device.name %> 
+            <h4>Power: </h4><%= device.power %>
+            <h4>Temperature: </h4><%= device.temp %> <text>Degree Celcius</text>
+            
+            <!-- Shows only the fields relevant to Aircon -->
+
+            <% } %>
+        <% }) %>
+        
+    </ul>
+</div>
+
+<div class="Curtains">
+    <h3>Your Curtains: </h3>
+
+    <ul>
+        <% availabledevices.forEach(function(device){ %>
+
+            <% if(device.type === "curtains"){ %>
+
+                <h3>Name of Device: </h3><%= device.name %>
+                <h4>State of Device: </h4><%= device.state %>
+
+                 <!-- Shows only the fields relevant to Curtains -->
+
+            <% } %>
+        <% }) %>
+
+    </ul>
+</div>
+
+<div class="Lights">
+    <h3>Your Lights: </h3>
+
+    <ul>
+        <% availabledevices.forEach(function(device){ %>
+
+        <% if(device.type === "lights"){ %>
+        
+            <h3>Name of Device: </h3><%= device.name %>
+            <h4>Power: </h4><%= device.power %>
+            
+             <!-- Shows only the fields relevant to Lights -->
+
+        <% } %>
+        <% }) %>
+
+    </ul>
+</div>
+
+<div class="TV">
+    <h3>Your TV: </h3>
+
+    <ul>
+        <% availabledevices.forEach(function(device){ %>
+
+        <% if(device.type === "tv"){ %>
+        
+            <h3>Name of Device: </h3><%= device.name %>
+            <h4>Power: </h4><%= device.power %>
+            <h4>Volume (if applicable): </h4><%= device.volume %>
+            
+             <!-- Shows only the fields relevant to TV -->
+
+        <% } %>
+        <% }) %>
+
+    </ul>
+</div>
+
+<div class="Oven">
+    <h3>Your Oven: </h3>
+
+    <ul>
+        <% availabledevices.forEach(function(device){ %>
+
+        <% if(device.type === "oven"){ %>
+    
+            <h3>Name of Device: </h3><%= device.name %>
+            <h4>Power: </h4><%= device.power %>
+            <h4>Temperature (if applicable): </h4><%= device.temp %> <text>Degree Celcius</text>
+            
+             <!-- Shows only the fields relevant to Oven -->
+
+        <% } %>
+        <% }) %>
+
+    </ul>
+
+</div>
+</html>

@@ -1,0 +1,53 @@
+<!-- Search for a device and it will show its status -->
+
+<!doctype html>
+<html>
+
+    <head>
+        <title>Search Page!</title>
+        <!-- Link to the CSS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="Stylesheets/style.css">
+    </head>
+    
+    <body class="grid-container-search">
+        <header id="header">
+            <div class="Logo">
+            <a href="/"><img src="images/Smarthome.jpg" alt="mySmartHome" , width="150" height="150"></a>
+            </div>
+    
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/list">View Devices</a></li>
+                <li><a href="/adddevice">Add Devices</a></li>
+                <li><a href="/devicesearch">Search Devices</a></li>
+                <li><a href="/deletedevice">Delete Devices</a></li>
+            </ul>
+    </header>
+    
+<body>
+<div id = "aboutsearch"></class>
+            <h1> This is Device Search page </h1>
+            <p>Select Name of Device to check its status</p>         
+</class>
+
+<div id ="search">
+    <form action="/devicesearch-result-db" method="GET">
+        <label for="type">Name of Device:</label><br>
+        <select id="name" type="text" name="name">
+            <% availabledevices.forEach(function(device){ %>
+            <option value = <%= device.name.split(' ') %>><%= device.name %> </option>  <!--With this, the user can key in any name without having to worry about name spacing-->
+            <% }) %>
+        </select><br><br>              
+        <button input type="submit" value="Submit">SUBMIT</button>
+    </form>
+</div>
+
+
+</body>
+
+<footer>
+    <p>Designed by <span>Logesh Kiran</span></p>
+</footer>
+
+</html>
